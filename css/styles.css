@@ -38,6 +38,9 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
+	width: 100%;
+	overflow: hidden;
+  margin-top: 80px;
 }
 #footer {
   background-color: #444;
@@ -47,6 +50,9 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   padding: 25px;
   text-align: center;
   text-transform: uppercase;
+	position: fixed;
+	width: 100%;
+	bottom: 0px;
 }
 /* ====================== Navigation ====================== */
 nav {
@@ -54,9 +60,12 @@ nav {
   height: 80px;
   background-color: #252831;
   text-align:center;
+	position: fixed;
+	top: 0;
+	z-index: 999;
 }
 nav h1 {
-  margin: auto;
+	margin: 25px 0;
 }
 nav h1 a {
   color: #fff;
@@ -109,6 +118,7 @@ nav h1 a {
   height: 50px;
   background-color: #3397DB;
   align-items: center;
+	display: inline-flex;
 }
 .filter-options h2 {
   color: white;
@@ -136,6 +146,10 @@ nav h1 a {
   margin: 0;
   padding: 30px 15px 60px;
   text-align: center;
+	width: 100%;
+}
+#restaurants-list>:last-child{
+  margin-bottom: 120px;
 }
 #restaurants-list li {
   background-color: #fff;
@@ -146,6 +160,8 @@ nav h1 a {
   padding: 0 30px 25px;
   text-align: left;
   width: 270px;
+  display: inline-grid;
+	float: left;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
@@ -204,8 +220,8 @@ nav h1 a {
 }
 .inside #footer {
   bottom: 0;
-  position: absolute;
-  width: 50%;
+  position: fixed;
+  width: 100%;
 }
 #restaurant-name {
   color: #f18200;
@@ -239,11 +255,13 @@ nav h1 a {
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 140px 40px 30px;
+	padding: 140px 20px 30px;
   width: 50%;
+  display: block;
+  overflow: auto;
 }
 #reviews-container {
-  padding: 30px 40px 80px;
+  padding: 30px 20px 80px;
 }
 #reviews-container h2 {
   color: #f58500;
@@ -272,4 +290,19 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+
+/* Extra small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1024px) {
+
 }
