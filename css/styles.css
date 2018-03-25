@@ -335,10 +335,19 @@ nav h1 a {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1024px) {
-
+	.inside #map-container {
+		height: 400px;
+		position: inherit;
+		width: 100%;
+	}
+	#restaurant-container {
+		padding: 40px 10px 30px;
+	}
+	#reviews-container {
+		width: 100%;
+		padding: 30px 10px 80px;
+	}
+	#reviews-list li {
+		width: calc(100vw - 70px);
+	}
 }
