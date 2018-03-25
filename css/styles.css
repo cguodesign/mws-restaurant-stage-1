@@ -157,7 +157,7 @@ nav h1 a {
   font-family: Arial,sans-serif;
   margin: 15px;
   min-height: 380px;
-  padding: 0 30px 25px;
+  padding: 25px 30px 25px;
   text-align: left;
   width: 270px;
   display: inline-grid;
@@ -294,7 +294,43 @@ nav h1 a {
 
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
-
+	nav {
+		height: 120px;
+	}
+	.filter-options {
+		display: inline-table;
+		padding: 20px 0;
+    text-align: center;
+	}
+	#footer {
+		padding: 25px 0;
+	}
+	#restaurants-list {
+		padding: 30px 0 60px;
+	}
+	#restaurants-list li {
+		width: 80%;
+		margin: 15px 0;
+		border: none;
+	}
+	/* inner page style */
+	.inside #map-container {
+		height: 400px;
+		position: inherit;
+		width: 100%;
+		top: 120px;
+	}
+	#restaurant-container {
+		padding: 40px 10px 30px;
+		width: 100%;
+	}
+	#reviews-container {
+		width: 100%;
+		padding: 30px 10px 80px;
+	}
+	#reviews-list li {
+		width: calc(100vw - 70px);
+	}
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
