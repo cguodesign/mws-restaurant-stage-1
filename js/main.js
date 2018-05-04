@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 startServiceWorker = () => {
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('js/sw/index.js')
+    navigator.serviceWorker.register('./sw.js')
     .then((registration) => {
       console.log('SW Registration successful. Scope is ' + registration.scope);
     }).catch((error) => {
@@ -93,21 +93,7 @@ window.initMap = () => {
     center: loc,
     scrollwheel: false
   });
-  console.log('init map');
   updateRestaurants();
-
-  google.maps.event.addListenerOnce(map, 'tilesloaded', function(){
-    console.log('lllllllllllllll');
-    console.log(document.querySelectorAll('#map a'));
-    google.maps.event.addListenerOnce(map, 'tilesloaded', function(){
-      console.log('lllllllllllllll');
-      console.log(document.querySelectorAll('#map a'));
-    });
-    [].slice.apply(document.querySelectorAll('#map a')).forEach(function(item) {
-      item.setAttribute('tabindex','-1');
-      console.log(item);
-    });
-  })
 }
 
 /**

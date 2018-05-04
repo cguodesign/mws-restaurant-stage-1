@@ -21,19 +21,19 @@
 
   <main id="maincontent">
     <section id="map-container">
-      <div id="map" aria-hidden="true"></div>
+      <div id="map" aria-hidden="true" tabindex="-1" role="application" title="Google Map" name="map"></div>
     </section>
     <section>
       <div class="filter-options">
         <h2>Filter Results</h2>
-        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" aria-required="true">
+        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" aria-required="true" tabindex="0">
           <option value="all">All Neighborhoods</option>
         </select>
-        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()" aria-required="true">
+        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()" aria-required="true" tabindex="0">
           <option value="all">All Cuisines</option>
         </select>
       </div>
-      <ul id="restaurants-list"></ul>
+      <ul id="restaurants-list" aria-live="assertive" aria-atomic="true" tabindex="0" aria-label="Restaurants"></ul>
     </section>
   </main>
 
